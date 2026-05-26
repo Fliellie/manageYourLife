@@ -1,0 +1,151 @@
+/* ==========================================
+   RESET & CÀI ĐẶT CHUNG
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Font chữ tròn trịa, dễ đọc và mang nét thân thiện kiểu Nhật */
+    font-family: 'Nunito', 'Segoe UI', 'Meiryo', sans-serif; 
+}
+
+body {
+    /* Giữ nguyên màu vàng pastel dễ chịu từ trang trước */
+    background-color: #FFEAA7; 
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* ==========================================
+   KHUNG CHỨA NỘI DUNG (THE CONTAINER)
+   ========================================== */
+.container {
+    background: #ffffff;
+    /* Viền đen dày đồng bộ với phong cách manga/anime trước đó */
+    border: 3px solid #1e1e1e; 
+    border-radius: 30px; /* Bo góc cực kỳ dễ thương */
+    padding: 50px 40px;
+    max-width: 650px; /* Giới hạn độ rộng để đọc văn bản không bị mỏi mắt */
+    width: 100%;
+    
+    /* Đổ bóng khối 3D tạo cảm giác như một cuốn sổ đặt trên bàn */
+    box-shadow: 0px 12px 0px #1e1e1e;
+    
+    /* Hiệu ứng xuất hiện mượt mà khi tải trang */
+    animation: popUp 0.4s ease-out;
+}
+
+/* ==========================================
+   TIÊU ĐỀ H1 (LỜI CHÀO)
+   ========================================== */
+.container h1 {
+    font-size: 3.5rem;
+    color: #1e1e1e;
+    font-weight: 900;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Tạo một chiếc gạch chân "bút dạ" màu vàng cute dưới chữ "Hey" */
+.container h1::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background-color: #FFEAA7;
+    z-index: -1; /* Đẩy lớp màu xuống dưới chữ */
+    border-radius: 5px;
+}
+
+/* ==========================================
+   ĐOẠN VĂN BẢN (THE PARAGRAPHS)
+   ========================================== */
+.container p {
+    font-size: 1.15rem;
+    color: #2d3436; /* Màu xám đen giúp dịu mắt khi đọc văn bản dài */
+    line-height: 1.8; /* Khoảng cách dòng thoáng, chuẩn phong cách tối giản */
+    margin-bottom: 20px;
+    text-align: justify; /* Căn đều hai bên cho gọn gàng */
+}
+
+/* Đoạn văn cuối cùng không cần khoảng cách dưới */
+.container p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================
+   ANIMATION EFFECT
+   ========================================== */
+@keyframes popUp {
+    0% {
+        transform: scale(0.9) translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive cho màn hình điện thoại nhỏ */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 20px;
+        border-radius: 20px;
+    }
+    .container h1 {
+        font-size: 2.5rem;
+    }
+    .container p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
+}
+
+/* ==========================================
+   NÚT BACK LÊN GÓC TRÁI TRÊN CÙNG
+   ========================================== */
+#JCBackToGreeting {
+    /* Đưa nút ra khỏi luồng văn bản thông thường */
+    position: absolute;
+    top: 25px;   /* Cách mép trên 25px */
+    left: 25px;  /* Cách mép trái 25px */
+    z-index: 10; /* Đảm bảo nút luôn nằm trên cùng, không bị che khuất */
+
+    /* Phong cách Japanese Cute đồng bộ */
+    background: #ffffff;
+    border: 3px solid #1e1e1e;
+    color: #1e1e1e;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 15px; /* Bo góc dễ thương */
+    cursor: pointer;
+    box-shadow: 0px 5px 0px #1e1e1e; /* Đổ bóng khối */
+    
+    transition: all 0.15s ease;
+}
+
+/* Hiệu ứng khi di chuột qua nút Back */
+#JCBackToGreeting:hover {
+    background-color: #f6f6f6;
+    transform: translateY(-2px);
+    box-shadow: 0px 7px 0px #1e1e1e;
+}
+
+/* Hiệu ứng khi bấm (Click) nút lún xuống */
+#JCBackToGreeting:active {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 0px #1e1e1e;
+}
+
+/* Tùy chỉnh nhỏ: Đảm bảo body không che mất nút trên màn hình hẹp */
+body {
+    position: relative;
+}

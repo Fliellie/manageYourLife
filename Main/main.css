@@ -1,0 +1,82 @@
+/* Reset cài đặt mặc định và căn giữa toàn bộ trang */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f6f9; /* Màu nền xám nhạt */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* Khung chứa chia làm 6 cột */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* CHUYỂN THÀNH 6 CỘT HÀNG NGANG */
+    column-gap: 20px; /* Khoảng cách giữa các cột (giảm bớt để vừa 6 nút) */
+    row-gap: 20px;    /* Khoảng cách giữa các hàng */
+    width: 100%;
+    max-width: 900px; /* Tăng chiều rộng để 6 nút hình vuông dàn trận cho đẹp */
+}
+
+/* Phong cách cho từng nút bấm */
+.btn-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 16px; /* Bo tròn góc */
+    aspect-ratio: 1 / 1; /* Vẫn giữ hình vuông */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease-in-out;
+    padding: 15px; /* Giảm padding một chút để icon không bị quá bé khi nút thu nhỏ */
+}
+
+/* Hiệu ứng khi di chuột vào nút */
+.btn-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fdfdfd;
+}
+
+/* Hiệu ứng khi click vào nút */
+.btn-box:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Định dạng ảnh ở giữa nút vuông */
+.btn-box img {
+    max-width: 55%; /* Tăng nhẹ tỉ lệ ảnh để nhìn rõ icon */
+    max-height: 55%;
+    object-fit: contain;
+}
+
+/* Responsive: Trên màn hình máy tính bảng và điện thoại */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr); /* Màn hình vừa (Ipad) tự tự thu về 4 cột */
+        column-gap: 15px;
+        row-gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); /* Màn hình điện thoại nhỏ tự thu về 3 cột cho đỡ bị tí hon */
+        column-gap: 12px;
+        row-gap: 12px;
+        max-width: 100%;
+    }
+    .btn-box {
+        border-radius: 12px;
+    }
+}

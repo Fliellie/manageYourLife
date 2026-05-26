@@ -1,0 +1,93 @@
+body{
+    margin:0;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    gap:24px;
+
+    background:#0d1117;
+
+    font-family:"JetBrains Mono", monospace;
+
+    color:#00ff9c;
+}
+
+#number{
+    margin:0;
+
+    font-size:120px;
+    font-weight:bold;
+
+    color:#00ff9c;
+
+    text-shadow:
+        0 0 8px #00ff9c,
+        0 0 20px #00ff9c55;
+}
+
+button{
+    width:220px;
+
+    padding:14px;
+
+    border:1px solid #00ff9c55;
+
+    border-radius:10px;
+
+    background:#161b22;
+
+    color:#00ff9c;
+
+    font-size:18px;
+    font-family:"JetBrains Mono", monospace;
+
+    cursor:pointer;
+
+    transition:0.15s;
+
+    box-shadow:
+        inset 0 0 10px #00ff9c11,
+        0 0 10px #000;
+}
+
+button:hover{
+    background:#1c2128;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 0 12px #00ff9c44;
+}
+
+button:active{
+    transform:scale(0.97);
+}
+
+#increaseBtn::before{
+    content:"+ ";
+}
+
+#decreaseBtn::before{
+    content:"- ";
+}
+
+#resetBtn::before{
+    content:"> ";
+}
+/* Định vị riêng cho nút Back bay lên góc trên bên trái */
+#back {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: auto; /* Tự động co giãn theo chữ bên trong */
+    padding: 8px 16px; /* Thu nhỏ gọn lại cho đẹp */
+    font-size: 14px;
+}
+
+/* Thêm ký hiệu mũi tên trước chữ "Back" */
+#back::before {
+    content: "← ";
+}

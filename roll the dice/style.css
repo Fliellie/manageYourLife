@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background: linear-gradient(135deg, #141414, #222);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#label{
+    font-size: 120px;
+    color: white;
+    margin-bottom: 30px;
+
+    text-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+#btn{
+    padding: 15px 40px;
+    font-size: 24px;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 15px;
+
+    background: white;
+    color: #111;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+#btn:hover{
+    transform: scale(1.08);
+    background: #e6e6e6;
+}
+
+#btn:active{
+    transform: scale(0.95);
+}
+
+
+#dice{
+    transition: transform 1s;
+}
+
+.spin{
+    transform: rotate(180deg);
+}

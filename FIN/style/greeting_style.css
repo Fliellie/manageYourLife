@@ -1,0 +1,107 @@
+/* ==========================================
+   RESET & BASE STYLES
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', 'Comic Sans MS', 'Meiryo', sans-serif; 
+}
+
+body {
+    background-color: #FFEAA7; /* Cute pastel yellow */
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative; /* Allows absolute positioning for the buttons */
+    
+    /* Centers the massive H1 perfectly in the middle of the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+/* ==========================================
+   HUGE HUGE H1 (10x BIGGER & CENTERED)
+   ========================================== */
+#WAYH {
+    font-size: 10rem; /* Massive size! */
+    color: #1e1e1e;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.1;
+    letter-spacing: -4px;
+    text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.1);
+    
+    /* Ensures it stays in the middle and doesn't get squished by buttons */
+    max-width: 70vw; 
+    z-index: 1; 
+}
+
+/* Auto-shrink slightly on smaller screens so it doesn't break the layout */
+@media (max-width: 1200px) {
+    #WAYH { font-size: 7rem; }
+}
+@media (max-width: 768px) {
+    #WAYH { font-size: 4rem; }
+}
+
+/* ==========================================
+   JAPANESE CUTE BUTTONS (COMMON STYLES)
+   ========================================== */
+button {
+    background: #ffffff;
+    border: 3px solid #1e1e1e; /* Thick manga-style outline */
+    color: #1e1e1e;
+    padding: 20px 40px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border-radius: 25px; /* Super rounded/cute corners */
+    cursor: pointer;
+    box-shadow: 0px 8px 0px #1e1e1e; /* Pop-art 3D shadow */
+    
+    /* Absolute positioning to force them to the sides */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Perfectly aligns vertically to the center */
+    z-index: 2;
+    
+    transition: all 0.2s ease;
+}
+
+/* ==========================================
+   POSITIONING & HOVER EFFECTS FOR EACH BUTTON
+   ========================================== */
+
+/* Left Side Button */
+#TFL {
+    left: 5%; /* Pushes it to the far left */
+}
+
+#TFL:hover {
+    color: #ff7675; /* Pastel Pink */
+    border-color: #ff7675;
+    box-shadow: 0px 10px 0px #ff7675;
+    transform: translateY(-53%); /* Keeps alignment while hovering up */
+}
+#TFL:active {
+    transform: translateY(-45%);
+    box-shadow: 0px 0px 0px #ff7675;
+}
+
+/* Right Side Button */
+#JC {
+    right: 5%; /* Pushes it to the far right */
+}
+
+#JC:hover {
+    color: #0984e3; /* Pastel Blue */
+    border-color: #0984e3;
+    box-shadow: 0px 10px 0px #0984e3;
+    transform: translateY(-53%);
+}
+#JC:active {
+    transform: translateY(-45%);
+    box-shadow: 0px 0px 0px #0984e3;
+}

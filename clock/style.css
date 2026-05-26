@@ -1,0 +1,97 @@
+/* ===== Base ===== */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, #0a0a0a, #000000);
+    font-family: "Orbitron", "Arial", sans-serif;
+}
+
+/* ===== Clock ===== */
+#theClock {
+    font-size: 5rem;
+    color: #ffe600; /* neon yellow */
+
+    letter-spacing: 4px;
+    padding: 20px 40px;
+
+    border: 2px solid #ffe600;
+    border-radius: 12px;
+
+    background: rgba(20, 20, 0, 0.4);
+
+    box-shadow:
+        0 0 10px #ffe600,
+        0 0 25px #ffd000,
+        0 0 50px #ffea00;
+
+    text-shadow:
+        0 0 5px #ffe600,
+        0 0 15px #ffd000,
+        0 0 30px #ffea00;
+
+    position: relative;
+    animation: flicker 2s infinite alternate;
+}
+
+/* ===== Flicker ===== */
+@keyframes flicker {
+    0% {
+        opacity: 1;
+        text-shadow:
+            0 0 5px #ffe600,
+            0 0 15px #ffd000,
+            0 0 30px #ffea00;
+    }
+    100% {
+        opacity: 0.85;
+        text-shadow:
+            0 0 2px #ffe600,
+            0 0 10px #ffd000;
+    }
+}
+
+/* ===== Scanlines ===== */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(255, 230, 0, 0.03),
+        rgba(255, 230, 0, 0.03) 1px,
+        transparent 1px,
+        transparent 3px
+    );
+    pointer-events: none;
+    mix-blend-mode: overlay;
+}
+#backBtn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    padding: 10px 16px;
+    font-size: 14px;
+
+    background: rgba(255, 230, 0, 0.1);
+    color: #ffe600;
+
+    border: 1px solid #ffe600;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    box-shadow: 0 0 10px #ffe600;
+    text-shadow: 0 0 5px #ffe600;
+
+    transition: 0.2s ease;
+}
+
+#backBtn:hover {
+    background: #ffe600;
+    color: black;
+    box-shadow: 0 0 20px #ffe600;
+}

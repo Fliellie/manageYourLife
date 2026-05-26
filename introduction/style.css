@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+
+    background: #fff7fb;
+    color: #333;
+
+    line-height: 1.6;
+}
+/* Thêm đoạn này vào cuối file style.css của bạn */
+
+#backBtn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: white;
+    color: #ff4fa3; /* Màu hồng đồng bộ với Header */
+    border: 2px solid #ff4fa3;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 50px; /* Bo tròn thon gọn */
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 79, 163, 0.15);
+    transition: all 0.3s ease;
+    z-index: 10; /* Đảm bảo nút luôn nổi lên trên */
+}
+
+#backBtn:hover {
+    background-color: #ff4fa3;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 79, 163, 0.3);
+}
+
+#backBtn:active {
+    transform: translateY(0);
+}
+
+/* Đảm bảo responsive trên điện thoại nút không bị đè chữ */
+@media(max-width: 600px){
+    #backBtn {
+        position: static; /* Trở về trạng thái bình thường trên màn hình nhỏ */
+        margin: 20px 0 0 20px;
+        display: inline-block;
+    }
+    header {
+        padding-top: 40px; /* Giảm padding để cân đối */
+    }
+}
+/* HEADER */
+
+header{
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background: #ffe3ef;
+}
+
+header h1{
+    font-size: 3.5rem;
+
+    color: #ff4fa3;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+
+header h2{
+    font-size: 1.1rem;
+
+    color: #666;
+
+    font-weight: 400;
+}
+
+/* MAIN LAYOUT */
+
+main{
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 50px auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+}
+
+/* CARDS */
+
+section{
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+
+    transition: 0.3s;
+}
+
+section:hover{
+    transform: translateY(-5px);
+}
+
+/* TITLES */
+
+h3{
+    color: #ff4fa3;
+
+    font-size: 2rem;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+}
+
+/* ABOUT */
+
+.about{
+    text-align: center;
+}
+
+.about img{
+    width: 250px;
+
+    border-radius: 20px;
+
+    margin: 20px 0;
+
+    transition: 0.3s;
+}
+
+.about img:hover{
+    transform: scale(1.03);
+}
+
+/* TEXT */
+
+p{
+    font-size: 1.05rem;
+
+    color: #444;
+
+    margin: 10px 0;
+}
+
+/* SKILLS */
+
+.skills ul{
+    list-style: none;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+.skills li{
+    background: #ffd6e7;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.skills li:hover{
+    background: #cdb4ff;
+
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+/* FOOTER */
+
+footer{
+    text-align: center;
+
+    padding: 30px;
+
+    margin-top: 40px;
+
+    background: #ffe3ef;
+
+    color: #666;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 900px){
+
+    main{
+        grid-template-columns: 1fr;
+    }
+
+}
+/* Thêm đoạn này vào cuối file style.css của bạn */
+
+#backBtn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: white;
+    color: #ff4fa3; /* Màu hồng đồng bộ với Header */
+    border: 2px solid #ff4fa3;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 50px; /* Bo tròn thon gọn */
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 79, 163, 0.15);
+    transition: all 0.3s ease;
+    z-index: 10; /* Đảm bảo nút luôn nổi lên trên */
+}
+
+#backBtn:hover {
+    background-color: #ff4fa3;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 79, 163, 0.3);
+}
+
+#backBtn:active {
+    transform: translateY(0);
+}
+
+/* Đảm bảo responsive trên điện thoại nút không bị đè chữ */
+@media(max-width: 600px){
+    #backBtn {
+        position: static; /* Trở về trạng thái bình thường trên màn hình nhỏ */
+        margin: 20px 0 0 20px;
+        display: inline-block;
+    }
+    header {
+        padding-top: 40px; /* Giảm padding để cân đối */
+    }
+}

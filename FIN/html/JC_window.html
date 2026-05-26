@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JC_view</title>
+    <link rel="stylesheet" href="style/jc_style.css">
+<body>
+    <button id="JCBackToGreeting">Back</button>
+    <div class="container">
+        <h1>Hey</h1>
+        
+        <p>
+            Nếu bạn đến đây chỉ vì tò mò, muốn đùa vui hay xem chuyện tình cảm 
+            như một trò tiêu khiển, thì có lẽ đây không phải là nơi phù hợp dành cho bạn. 
+            Chúng tôi tạo ra không gian này với mong muốn kết nối những con người thật lòng, 
+            nghiêm túc trong việc tìm kiếm một mối quan hệ bền vững và một người có thể đồng hành lâu dài trong cuộc sống.
+        </p>
+
+        <p>
+            Tình cảm không phải là trò chơi để thử cho vui rồi rời đi khi chán. 
+            Mỗi cuộc trò chuyện, mỗi lần mở lòng đều mang theo sự chân thành và hy vọng của một ai đó. 
+            Vì vậy, chúng tôi mong rằng tất cả mọi người khi tham gia đều đến với sự tôn trọng, tử tế và nghiêm túc.
+        </p>
+
+        <p>
+            Nếu bạn thực sự muốn tìm kiếm một người để thấu hiểu, sẻ chia và xây dựng 
+            một mối quan hệ ý nghĩa, chúng tôi luôn chào đón bạn. 
+            Còn nếu mục đích của bạn chỉ là trêu đùa cảm xúc hay tìm kiếm sự giải trí nhất thời, 
+            xin hãy dừng lại tại đây để tránh làm tổn thương người khác.
+        </p>
+    </div>
+<script>
+        const backBtn = document.getElementById("JCBackToGreeting");
+        if (backBtn) {
+            backBtn.addEventListener("click", function () {
+                window.open('greeting.html', '_self');
+            });
+        }
+    </script>
+</body>
+</html>
+

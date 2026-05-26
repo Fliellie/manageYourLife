@@ -1,0 +1,108 @@
+/* Cấu hình chung cho toàn bộ trang */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f9f4; /* Màu nền xanh lá siêu nhẹ, dịu mắt */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+/* Nút Back ở góc trên bên trái */
+#backBtn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: transparent;
+    color: #2e7d32; /* Xanh lá đậm */
+    border: 2px solid #2e7d32;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#backBtn:hover {
+    background-color: #2e7d32;
+    color: white;
+}
+
+/* Hộp thoại chính chứa bộ đổi tiền */
+#mainbox {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(46, 125, 50, 0.15); /* Đổ bóng hơi hướng xanh lá */
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+}
+
+/* Tiêu đề */
+#h2 {
+    color: #2e7d32; /* Màu xanh lá chủ đạo */
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+/* Ô nhập số tiền */
+#text {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #a5d6a7; /* Viền xanh lá nhạt */
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#text:focus {
+    border-color: #4caf50; /* Viền đậm hơn khi click vào ô input */
+}
+
+/* Định dạng khu vực checkbox */
+#mainbox br + input[type="checkbox"],
+#mainbox input[type="checkbox"] {
+    margin: 10px 8px 10px 0;
+    cursor: pointer;
+    accent-color: #4caf50; /* Biến dấu tích của checkbox thành màu xanh lá */
+}
+
+/* Đoạn văn bản hiển thị kết quả/thông báo */
+#thongbao {
+    color: #1b5e20;
+    font-weight: bold;
+    min-height: 24px; /* Giữ không gian để giao diện không bị giật khi hiện chữ */
+    margin: 15px 0;
+}
+
+/* Nút bấm kích hoạt (Click to start) */
+#btn {
+    background-color: #4caf50; /* Màu nền xanh lá */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 4px 6px rgba(76, 175, 80, 0.2);
+}
+
+#btn:hover {
+    background-color: #45a049; /* Xanh tối hơn một chút khi di chuột qua */
+}
+
+#btn:active {
+    transform: scale(0.98); /* Hiệu ứng lún xuống khi click */
+}
